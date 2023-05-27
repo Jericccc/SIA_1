@@ -905,17 +905,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        tts.speak("Please Speak your destination", TextToSpeech.QUEUE_FLUSH, null);
 
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
+
+
+
                 promptSpeechInput();
             }
         };
 
         Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(runnable,2000);
+
+
+
+
 
 
 
@@ -1007,8 +1013,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         sendRequest();
         sendCallMap();
 
-
-
     }
 
     @Override
@@ -1064,7 +1068,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     private void sendCallMap(){
-
 
         double lati=0.0;
         double longi=0.0;
@@ -1124,9 +1127,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng hcmus = new LatLng(lati, longi);
 
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(hcmus, 15));
-        originMarkers.add(mMap.addMarker(new MarkerOptions()
-                .title("Jaipur")
-                .position(hcmus)));
+        originMarkers.add(mMap.addMarker(new MarkerOptions().title("Jaipur").position(hcmus)));
 
         GoogleMapOptions options = new GoogleMapOptions();
         options.mapType(GoogleMap.MAP_TYPE_SATELLITE)
@@ -1221,16 +1222,3 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

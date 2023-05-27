@@ -47,6 +47,8 @@ public class MainActivity extends Activity implements AccelerometerListener {
         Toast.makeText(getBaseContext(), "Motion detected ",
                 Toast.LENGTH_SHORT).show();
 
+        tts.speak("Please Speak your destination", TextToSpeech.QUEUE_FLUSH, null);
+
 
         NotificationManager notif = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         Notification notify = new Notification.Builder
@@ -59,8 +61,6 @@ public class MainActivity extends Activity implements AccelerometerListener {
                 + this.getPackageName());
         notify.defaults |= Notification.DEFAULT_VIBRATE;
         notif.notify(0, notify);
-
-
 
 
 
@@ -123,17 +123,5 @@ public class MainActivity extends Activity implements AccelerometerListener {
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
