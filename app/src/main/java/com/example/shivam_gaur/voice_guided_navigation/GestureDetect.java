@@ -34,6 +34,11 @@ public class GestureDetect extends Activity implements GestureDetector.OnGesture
                 }
             }
         });
+
+        Intent i=new Intent(GestureDetect.this, MapsActivity.class);
+        tts.speak("Please Speak your destination", TextToSpeech.QUEUE_FLUSH, null);
+
+        startActivity(i);
     }
 
 

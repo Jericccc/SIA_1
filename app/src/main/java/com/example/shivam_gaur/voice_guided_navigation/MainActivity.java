@@ -6,17 +6,29 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends Activity implements AccelerometerListener {
 
+    TextToSpeech tts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tts=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    tts.setLanguage(Locale.ENGLISH);
+                }
+            }
+        });
     }
 
 
@@ -44,7 +56,7 @@ public class MainActivity extends Activity implements AccelerometerListener {
         notify.flags |= Notification.FLAG_AUTO_CANCEL;
         //notify.defaults |= Notification.DEFAULT_SOUND;
         notify.sound = Uri.parse("android.resource://"
-                + this.getPackageName() + "/" + R.raw.begin);
+                + this.getPackageName());
         notify.defaults |= Notification.DEFAULT_VIBRATE;
         notif.notify(0, notify);
 
@@ -68,6 +80,7 @@ public class MainActivity extends Activity implements AccelerometerListener {
 
 //Start Accelerometer Listening
             AccelerometerManager.startListening(this);
+            tts.speak("Please Speak your destination", TextToSpeech.QUEUE_FLUSH, null);
         }
     }
 
@@ -108,9 +121,6 @@ public class MainActivity extends Activity implements AccelerometerListener {
 
                     Toast.LENGTH_SHORT).show();
         }
-
-
-
 
     }
 

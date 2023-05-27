@@ -831,28 +831,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        Notification notify = new Notification.Builder
-                (getApplicationContext()).setContentTitle("Speak destination name").setContentText("Enter Destination").
+        Notification notify = new Notification.Builder(getApplicationContext()).setContentTitle("Speak destination name").setContentText("Enter Destination").
                 setContentTitle("Speak destination name").setSmallIcon(R.mipmap.ic_launcher).build();
 
         notify.flags |= Notification.FLAG_AUTO_CANCEL;
         //notify.defaults |= Notification.DEFAULT_SOUND;
         notify.sound = Uri.parse("android.resource://"
-                + this.getPackageName() + "/" + R.raw.bottomleft);
+                + this.getPackageName());
         notify.defaults |= Notification.DEFAULT_VIBRATE;
         notif.notify(0, notify);
 
 
         //tts.speak("Please Speak your destination", TextToSpeech.QUEUE_FLUSH, null);
-
-
-
-
-
-
-
-
-
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -915,7 +905,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
+        tts.speak("Please Speak your destination", TextToSpeech.QUEUE_FLUSH, null);
 
         Runnable runnable = new Runnable() {
             @Override
@@ -926,6 +916,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(runnable,2000);
+
+
 
 
 //        btnSpeak.setOnClickListener(new View.OnClickListener() {
@@ -947,6 +939,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        });
 
     }
+
 
     final int REQ_CODE_SPEECH_INPUT = 100;
     //Showing google speech input dialog
@@ -1007,7 +1000,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         notify.flags |= Notification.FLAG_AUTO_CANCEL;
         //notify.defaults |= Notification.DEFAULT_SOUND;
         notify.sound = Uri.parse("android.resource://"
-                + this.getPackageName() + "/" + R.raw.bottom_right);
+                + this.getPackageName());
         notify.defaults |= Notification.DEFAULT_VIBRATE;
         notif.notify(0, notify);
 

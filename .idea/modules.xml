@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Voice-Guided-Navigation-for-visually-impaired.iml" filepath="$PROJECT_DIR$/.idea/modules/Voice-Guided-Navigation-for-visually-impaired.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Voice-Guided-Navigation-for-visually-impaired.app.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Voice_Guided_Navigation.iml" filepath="$PROJECT_DIR$/Voice_Guided_Navigation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SIA_1.iml" filepath="$PROJECT_DIR$/.idea/modules/SIA_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SIA_1.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SIA_1.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SIA_1.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SIA_1.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SIA_1.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SIA_1.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SIA_1.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SIA_1.app.unitTest.iml" />
     </modules>
   </component>
 </project>
