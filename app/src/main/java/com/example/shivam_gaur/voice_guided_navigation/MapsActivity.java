@@ -438,7 +438,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         sendRequest();
 
-        if (etDestination.getText().toString().equalsIgnoreCase("intramuros")) {
+        if (etDestination.getText().toString().equalsIgnoreCase("Intramuros")) {
             tts.speak("You can't go there, this is a prone accident area, please try again", TextToSpeech.QUEUE_FLUSH, null);
 
             // Open the microphone again
@@ -455,7 +455,102 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }, 4500);
 
-        }else {
+        } else if (etDestination.getText().toString().equalsIgnoreCase("Binondo")) {
+            tts.speak("You can't go there, this is a prone accident area, please try again", TextToSpeech.QUEUE_FLUSH, null);
+
+            // Open the microphone again
+//            promptSpeechInput();
+
+
+            // Delay before opening the microphone again
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Open the microphone again
+                    promptSpeechInput();
+                }
+            }, 4500);
+
+            
+        }else if (etDestination.getText().toString().equalsIgnoreCase("Divisoria")) {
+            tts.speak("You can't go there, this is a prone accident area, please try again", TextToSpeech.QUEUE_FLUSH, null);
+
+            // Open the microphone again
+//            promptSpeechInput();
+
+
+            // Delay before opening the microphone again
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Open the microphone again
+                    promptSpeechInput();
+                }
+            }, 4500);
+
+
+        }else if (etDestination.getText().toString().equalsIgnoreCase("168 Shopping Mall")) {
+            tts.speak("You can't go there, this is a prone accident area, please try again", TextToSpeech.QUEUE_FLUSH, null);
+
+            // Open the microphone again
+//            promptSpeechInput();
+
+
+            // Delay before opening the microphone again
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Open the microphone again
+                    promptSpeechInput();
+                }
+            }, 4500);
+
+
+        }else if (etDestination.getText().toString().equalsIgnoreCase("Delpan")) {
+            tts.speak("You can't go there, this is a prone accident area, please try again", TextToSpeech.QUEUE_FLUSH, null);
+
+            // Open the microphone again
+//            promptSpeechInput();
+
+
+            // Delay before opening the microphone again
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Open the microphone again
+                    promptSpeechInput();
+                }
+            }, 4500);
+
+
+        }else if (etDestination.getText().toString().equalsIgnoreCase("D8 Shopping Mall")) {
+            tts.speak("You can't go there, this is a prone accident area, please try again", TextToSpeech.QUEUE_FLUSH, null);
+
+            // Open the microphone again
+//            promptSpeechInput();
+
+
+            // Delay before opening the microphone again
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Open the microphone again
+                    promptSpeechInput();
+                }
+            }, 4500);
+
+
+        }
+
+
+
+
+        else {
 
             sendCallMap();
         }
