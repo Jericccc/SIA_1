@@ -11,7 +11,7 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel target="16">
       <module name="Voice-Guided-Navigation-for-visually-impaired.app" target="18" />
     </bytecodeTargetLevel>
   </component>

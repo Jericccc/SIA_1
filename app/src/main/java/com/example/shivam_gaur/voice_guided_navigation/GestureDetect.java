@@ -79,6 +79,7 @@ public class GestureDetect extends Activity implements GestureDetector.OnGesture
     public boolean onSingleTapUp(MotionEvent event){
         return true;
     }
+
     public boolean onDoubleTap(MotionEvent event){
         Log.d(DEBUG_TAG,"onDoubleTap: "+event.toString());
         Toast.makeText(this,"Double Tapped", Toast.LENGTH_LONG).show();
